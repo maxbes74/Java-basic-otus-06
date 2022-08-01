@@ -11,6 +11,7 @@ public class HomeWork {
                 {"С помощью какой команды git можно получить полную копию удаленного репозитория?", "1. commit", "2. push", "3. clone", "4. copy"},
                 {"Какой применяется цикл, когда не известно количество итераций?", "1. while", "2. for", "3. loop",}
         };
+
         int[] correctAnswers = {2, 3, 1};
         int k = 0;
         for (int i = 0; i < questions.length; i++) {
