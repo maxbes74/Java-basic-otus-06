@@ -17,13 +17,19 @@ public class HomeWork {
             for (int j = 0; j < questions[i].length; j++) {
                 System.out.println(questions[i][j]);
             }
-            int userVariants = cs.nextInt();
-            if (userVariants == correctAnswers[k]) {
-                System.out.println("Правильно");
-                userCorrectAnswer++;
+            if (cs.hasNextInt()) {
+                int userVariants = cs.nextInt();
+                if (userVariants == correctAnswers[k]) {
+                    System.out.println("Правильно");
+                    userCorrectAnswer++;
+                } else {
+                    System.out.println("Неправильно");
+                    userNotCorrectAnswer++;
+                }
             } else {
                 System.out.println("Неправильно");
                 userNotCorrectAnswer++;
+                cs.next();
             }
             k++;
         }
