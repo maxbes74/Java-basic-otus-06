@@ -20,7 +20,7 @@ public class HomeWork {
         int correctAnswerNumber = 0;
         int questionNumber = 0;
 
-        for (int j = 0; j < answerOptions.length; j++) {
+        for (int j = 0; j < questions.length; j++) {
             System.out.println(questions[questionNumber]);
             for (int k = 0; k < answerOptions[j].length; k++) {
                 System.out.println(answerOptions[j][k]);
