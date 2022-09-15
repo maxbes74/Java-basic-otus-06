@@ -1,4 +1,5 @@
 import jdk.swing.interop.SwingInterOpUtils;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.*;
 
@@ -22,12 +23,28 @@ public class Test {
         setPetrovAccount.add("555");
         setPetrovAccount.add("444");
 
+        Account sidorovAccount = new Account();
+        Set<String> setSidorovAccount = sidorovAccount.madeSetAccount();
+        setSidorovAccount.add("852");
+        setSidorovAccount.add("961");
+
 
         Map<Client, Set<String>> persons = new HashMap<>();
         persons.put(ivanov, setIvanovAccount);
         persons.put(petrov, setPetrovAccount);
-        System.out.println(persons.get(ivanov));
-        System.out.println(persons.get(petrov));
+        persons.put(sidorov, setSidorovAccount);
+//        System.out.println(persons.get(ivanov));
+//        System.out.println(persons.get(petrov));
+//        System.out.println(persons.get(sidorov));
+
+//        System.out.println(persons.keySet());
+//        System.out.println(persons.values());
+
+
+        //выводит весь мап
+//        for (Map.Entry<Client, Set<String>> item : persons.entrySet()) {
+//            System.out.println("ключ: " + item.getKey() + "Значение: " + item.getValue());
+//        }
 
     }
 }
