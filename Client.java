@@ -1,42 +1,19 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Client {
-    private String fullName ;
-    private int age ;
+    private String fullName;
+    private int age;
+    List <Account> listAccount;
 
-    public Client(String fullName, int age) {
+    public Client(String fullName, int age, List<Account> listAccount) {
         this.fullName = fullName;
         this.age = age;
+        this.listAccount = listAccount;
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Client client = (Client) o;
-
-        if (age != client.age) return false;
-        return fullName != null ? fullName.equals(client.fullName) : client.fullName == null;
+    public List<Account> addAccount(String setNumberAccount) {
+        listAccount.add(0,setNumberAccount);
+        return listAccount;
     }
-
-    @Override
-    public int hashCode() {
-        int result = fullName != null ? fullName.hashCode() : 0;
-        result = 31 * result + age;
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Клиент: " +
-                "Ф.И.О. = '" + fullName + '\'' +
-                ", возраст = " + age +
-                '}';
-    }
-
 }
 
