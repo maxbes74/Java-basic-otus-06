@@ -17,6 +17,12 @@ public class Client {
         return list;
     }
 
+
+
+    public void addAccount (Client client,String account){
+        client.listAccount.add(account);
+
+    }
     @Override
     public String toString() {
         return "Client{" +

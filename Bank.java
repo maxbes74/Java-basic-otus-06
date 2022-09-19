@@ -7,6 +7,8 @@ public class Bank {
         ivanov.listAccount.add("13123JGG");
         ivanov.listAccount.add("123123YEB");
         System.out.println(ivanov);
+        ivanov.addAccount(ivanov,"2312hfhadk");
+        System.out.println(ivanov);
     }
 
 }
