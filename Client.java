@@ -22,5 +22,9 @@ public class Client {
                 ", listAccount=" + listAccount +
                 '}';
     }
+
+    public List<Account> getListAccount() {
+        return listAccount;
+    }
 }
 
