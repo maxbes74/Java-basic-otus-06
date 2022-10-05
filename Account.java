@@ -1,6 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Account {
     private final int numberAccount;
     private int numberOfCoins;
+//    private List<Integer> listAccount;
+
 
     public Account(int numberAccount) {
         this.numberAccount = numberAccount;
@@ -9,11 +14,6 @@ public class Account {
 
     public void setNumberOfCoins(int numberOfCoins) {
         this.numberOfCoins = numberOfCoins;
-    }
-
-    @Override
-    public String toString() {
-        return "Счет{" + "№ счета = " + numberAccount + ", количество монет = " + numberOfCoins + '}';
     }
 
     @Override
@@ -33,7 +33,16 @@ public class Account {
         result = 31 * result + numberOfCoins;
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Счет {" +
+                "№ счета = " + numberAccount +
+                ", количество монет = " + numberOfCoins +
+                '}';
+    }
 }
+
 
 
 

@@ -7,16 +7,25 @@ public class Bank {
         Client sidorov = new Client("Сидоров А.П.", 25);
         Client petrov = new Client("Петров Г.М.", 30);
 
-        Account accountIvanov1 = new Account(1);
-        Account accountIvanov2 = new Account(2);
+        Account account1 = new Account(1);
+        Account account2 = new Account(2);
+        List<Account> listAccount1 = new ArrayList<>();
+        listAccount1.add(account1);
+        listAccount1.add(account2);
 
-        Account accountSidorov1 = new Account(3);
-        Account accountSidorov2 = new Account(4);
-        Account accountSidorov3 = new Account(5);
+        Account account3 = new Account(3);
+        Account account4 = new Account(4);
+        Account account5 = new Account(5);
+        List<Account> listAccount2 = new ArrayList<>();
+        listAccount2.add(account3);
+        listAccount2.add(account4);
+        listAccount2.add(account5);
 
-        Account accountPetrov1 = new Account(6);
+        Account account6 = new Account(6);
+        List<Account> listAccount3 = new ArrayList<>();
+        listAccount3.add(account6);
 
-
+//добавление монет
 //        accountIvanov1.setNumberOfCoins(100);
 //        accountIvanov2.setNumberOfCoins(30);
 //
@@ -27,17 +36,6 @@ public class Bank {
 //        accountPetrov1.setNumberOfCoins(58);
 
 
-// добавление счета клиенту
-        ivanov.addAccount(accountIvanov1);
-        ivanov.addAccount(accountIvanov2);
-
-        petrov.addAccount(accountPetrov1);
-
-        sidorov.addAccount(accountSidorov1);
-        sidorov.addAccount(accountSidorov2);
-        sidorov.addAccount(accountSidorov3);
-
-
 //полная информация о клиенте
 
 //        System.out.println(ivanov);
@@ -45,15 +43,18 @@ public class Bank {
 //        System.out.println(sidorov);
 
         Map<Client, List<Account>> clients = new HashMap<>();
-        clients.put(ivanov, ivanov.getListAccount());
-        clients.put(petrov, petrov.getListAccount());
-        clients.put(sidorov, sidorov.getListAccount());
+        clients.put(ivanov, listAccount1);
+        clients.put(petrov, listAccount3);
+        clients.put(sidorov, listAccount2);
 
-//        for ( Map.Entry <Client, List<Account>> entry : clients.entrySet()) {
-//            System.out.println(entry.getKey());
-//
-//        }
 
+
+        for (Map.Entry<Client, List<Account>> entry : clients.entrySet()) {
+                if (entry.getValue().contains(account4))
+                System.out.println(entry.getKey());
+
+
+        }
 
         // информация о счетах и количестве монет по клиенту.
 
@@ -61,6 +62,5 @@ public class Bank {
 //        System.out.println(clients.get(petrov));
 //        System.out.println(clients.get(sidorov));
     }
-
 
 }
