@@ -4,8 +4,6 @@ import java.util.List;
 public class Account {
     private final int numberAccount;
     private int numberOfCoins;
-//    private List<Integer> listAccount;
-
 
     public Account(int numberAccount) {
         this.numberAccount = numberAccount;
@@ -42,12 +40,3 @@ public class Account {
                 '}';
     }
 }
-
-
-
-
-
-
-
-
-
