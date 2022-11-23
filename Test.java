@@ -1,10 +1,12 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Test {
-    public static void main(String[] args) {
-//        ABC abc= new ABC();
-//        abc.array();
-//        //3 jib,rf
-//        int x= 9;
-//        System.out.println(x/0);
+    public void ReadFile() throws FileNotFoundException {
+        File file = new File("test");
+        Scanner sc = new Scanner(file);
     }
 
 }
+
