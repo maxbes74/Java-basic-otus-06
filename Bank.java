@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Bank {
+    private static final Map<Client, List<Account>> clients = new HashMap<>();
     public static void main(String[] args) {
 
         Client ivanov = new Client("Иванов И.И.", 56);
@@ -35,7 +36,7 @@ public class Bank {
 
         account6.setNumberOfCoins(58);
 
-        Map<Client, List<Account>> clients = new HashMap<>();
+//        Map<Client, List<Account>> clients = new HashMap<>();
         clients.put(ivanov, listAccount1);
         clients.put(petrov, listAccount3);
         clients.put(sidorov, listAccount2);
@@ -43,12 +44,12 @@ public class Bank {
         //полная информация о клиенте
         infoClient(ivanov);
         // информация о счетах и количестве монет по клиенту.
-        getAccounts(clients, sidorov);
+        getAccounts(sidorov);
         // информация о кленте по счету.
         findClient(clients, account4);
     }
 
-    public static void getAccounts(Map<Client, List<Account>> clients, Client client) {
+    public static void getAccounts(Client client) {
         System.out.println(clients.get(client));
     }
 
