@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Bank {
     private static final Map<Client, List<Account>> clients = new HashMap<>();
+
     public static void main(String[] args) {
 
         Client ivanov = new Client("Иванов И.И.", 56);
@@ -46,14 +47,15 @@ public class Bank {
         // информация о счетах и количестве монет по клиенту.
         getAccounts(sidorov);
         // информация о кленте по счету.
-        findClient(clients, account4);
+        findClient(account6);
     }
 
     public static void getAccounts(Client client) {
+
         System.out.println(clients.get(client));
     }
 
-    public static void findClient(Map<Client, List<Account>> clients, Account account) {
+    public static void findClient(Account account) {
         for (Map.Entry<Client, List<Account>> entry : clients.entrySet()) {
             if (entry.getValue().contains(account))
                 System.out.println(entry.getKey());
