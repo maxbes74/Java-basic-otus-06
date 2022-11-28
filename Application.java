@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 public class Application {
     public static void main(String[] args) {
 
-
+/*
         Test t = new Test();
         try {
             t.ReadFile();
@@ -17,6 +17,14 @@ public class Application {
 
         Test3 t3 = new Test3();
         t3.printArr();
-    }
-}
+*/
+        Test4 t4 = new Test4();
+        try {
+            t4.setDiameter(0);
+        } catch (DiameterException e) {
+            e.printStackTrace();
+        }
 
+    }
+
+}
