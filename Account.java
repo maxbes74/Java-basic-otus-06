@@ -7,6 +7,11 @@ public class Account {
         this.numberOfCoins = 0;
     }
 
+    public Account(int numberAccount, int numberOfCoins) {
+        this.numberAccount = numberAccount;
+        this.numberOfCoins = 0;
+    }
+
     public void setNumberOfCoins(int numberOfCoins) {
         this.numberOfCoins = numberOfCoins;
     }
