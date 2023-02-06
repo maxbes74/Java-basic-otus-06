@@ -10,7 +10,7 @@ class Main {
                 break;
             } else {
                 int n = Integer.parseInt(command);
-                int sum = WordSum.wordSum(n);
+                System.out.println(n + WordSum.wordSum(n));
             }
         }
     }
